@@ -1,0 +1,16 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  align-items: flex-start;
+  width: 150px;
+}
+
+.product-image {
+  display: block;
+  padding: 1rem;
+}
+
+.product-title {
+  width: 100%;
+}

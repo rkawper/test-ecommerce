@@ -1,0 +1,15 @@
+.categories {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+  background-color: blanchedalmond;
+  gap: 1rem;
+  align-items: center;
+}
+
+.category {
+  cursor: pointer;
+  font-weight: 200;
+  text-transform: capitalize;
+}
