@@ -2,7 +2,7 @@ import useApi from "../hooks/useApi";
 import "./Header.css";
 import Loading from "./Loading";
 import { CATEGORIES_URL } from "../consts";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { useCategoryContext } from "../contexts/CategoryContext";
 
 const Header = () => {
@@ -12,6 +12,11 @@ const Header = () => {
     (category) => setSelectedCategory(category),
     [setSelectedCategory]
   );
+  useEffect(() => {
+    if (categories) {
+      setSelectedCategory(categories[0]);
+    }
+  }, [categories, setSelectedCategory]);
   if (isLoading) {
     return <Loading />;
   } else if (error) {
